@@ -1,35 +1,34 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 export const InputUseState = () => {
+    // определяем состояние
+    const [message, setMessage] = React.useState('');
+    const [update, setUpdate] = React.useState(message);
 
-    const [details, setDetails] = useState({
-        name: "",
-        email: "",
-        password: "",
-        address: ""
-    })
-
-    const handleChange = (e: { target: any; }) => {
-        const {name, value} = e.target;
-        setDetails((prev) => {
-            return { ...prev, [name]: value }
-        });
+    const handleChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+        setMessage(e.target.value);
+        //console.log("value is:", e.target.value);
     };
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
-        e.preventDefault();
-        console.log(details);
-    }
+    const handleClick = () => {
+        setUpdate(message);
+        //console.log("handleClick", message);
+    };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h3>Name:</h3> <input type="text" name="name" onChange={handleChange}/>
-            <h3>Email:</h3> <input type="email" name="email" onChange={handleChange}/>
-            <h3>Password:</h3>{" "}
-            <input type="password" name="password" onChange={handleChange}/>
-            <h3>Address:</h3> <textarea name="address" onChange={handleChange}></textarea>
-            <br/>
-            <button type="submit">Submit Form</button>
-        </form>
-    );
+        <div>
+            <input
+                type="text"
+                id="message"
+                name="message"
+                onChange={handleChange}
+                value={message}
+                autoComplete="off"
+            />
+            <h2>Message: {message}</h2>
+            <h2>Updated: {update}</h2>
+
+            <button onClick={handleClick}>Update</button>
+        </div>
+    )
 }
