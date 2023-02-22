@@ -17,6 +17,8 @@ export const InputUseState = () => {
 
     return (
         <div>
+            <h1>useState</h1>
+
             <input
                 type="text"
                 id="message"
@@ -25,8 +27,8 @@ export const InputUseState = () => {
                 value={message}
                 autoComplete="off"
             />
-            <h2>Message: {message}</h2>
-            <h2>Updated: {update}</h2>
+            <p>Message: {message}</p>
+            <p>Updated: {update}</p>
 
             <button onClick={handleClick}>Update</button>
         </div>

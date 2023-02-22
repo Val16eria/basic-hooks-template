@@ -1,22 +1,23 @@
 import React from 'react';
 import './App.css';
-import {UseState} from "./components/hooks-template/test/UseState";
+//import {UseState} from "./components/hooks-template/test/UseState";
 import {InputUseState} from "./components/hooks-template/useState-useReducer/InputUseState";
-import {UseRef} from "./components/hooks-template/test/UseRef";
+//import {UseRef} from "./components/hooks-template/test/UseRef";
+//import {UseReducer} from "./components/hooks-template/test/UseReducer";
+import {InputUseReducer} from "./components/hooks-template/useState-useReducer/InputUseReducer";
 
 function App() {
   return (
     <div className="App">
-        <div style={{background: "lightblue"}}>
-            <h1>useState from "test"</h1>
-            <UseState />
-            <h1>useRef from "test"</h1>
-            <UseRef />
+        <div style={{padding: "20px 0"}}>
+            {/*<UseState />*/}
+            {/*<UseRef />*/}
+            {/*<UseReducer />*/}
         </div>
 
-        <div style={{background: "lightpink"}}>
-            <h1>useState and useReducer</h1>
+        <div style={{background: "lightpink", padding: "20px 0"}}>
             <InputUseState />
+            <InputUseReducer />
         </div>
     </div>
   );
