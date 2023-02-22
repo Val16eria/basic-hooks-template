@@ -46,6 +46,8 @@ export const UseReducer = () => {
                     dispatch({type: 'email', payload: e.target.value})
                 }
             />
+            <p>username: {state.username}</p>
+            <p>email: {state.email}</p>
         </div>
     );
 }

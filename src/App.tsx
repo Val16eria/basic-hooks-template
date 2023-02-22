@@ -3,8 +3,9 @@ import './App.css';
 //import {UseState} from "./components/hooks-template/test/UseState";
 import {InputUseState} from "./components/hooks-template/useState-useReducer/InputUseState";
 //import {UseRef} from "./components/hooks-template/test/UseRef";
-//import {UseReducer} from "./components/hooks-template/test/UseReducer";
+import {UseReducer} from "./components/hooks-template/test/UseReducer";
 import {InputUseReducer} from "./components/hooks-template/useState-useReducer/InputUseReducer";
+import {UseCallback} from "./components/hooks-template/test/UseCallback";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <div style={{padding: "20px 0"}}>
             {/*<UseState />*/}
             {/*<UseRef />*/}
-            {/*<UseReducer />*/}
+            <UseReducer />
+            <UseCallback />
         </div>
 
         <div style={{background: "lightpink", padding: "20px 0"}}>
