@@ -39,6 +39,7 @@ export const UseReducer = () => {
                     dispatch({type: 'username', payload: e.target.value})
                 }
             />
+            <br />
             <input
                 type="email"
                 value={state.email}

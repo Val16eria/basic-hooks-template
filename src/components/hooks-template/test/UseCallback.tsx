@@ -2,7 +2,7 @@ import React, {useCallback, useState} from "react";
 
 export const UseCallback = () => {
     const [count, setCount] = useState(0);
-    const addTwo = useCallback(() => setCount(prev => prev + 1), []);
+    const addTwo = useCallback(() => setCount(prev => prev + 2), []);
 
     return (
         <div>

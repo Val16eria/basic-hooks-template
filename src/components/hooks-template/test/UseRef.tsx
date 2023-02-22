@@ -10,7 +10,7 @@ export const UseRef = () => {
 
     return (
         <div>
-            <h1>useRef from "test"</h1>
+            <h1>useRef</h1>
 
             {/*ссылка на ввод*/}
             <input ref={ref}/>
