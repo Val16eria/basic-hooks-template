@@ -10,7 +10,7 @@ export const InputUseRef = () => {
     //console.log(inputRef?.current?.value);
     return (
         <div>
-            <h1>InputUseRef and useCallback</h1>
+            <h1>useRef and useCallback</h1>
             {/*useCallback*/}
             <p>{count}</p>
             <button onClick={addTwo}>
